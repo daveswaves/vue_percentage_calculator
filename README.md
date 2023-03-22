@@ -1,4 +1,4 @@
-# team_dashboard
+# percentage_calculator
 
 Codes the Team Dashboad (Laracasts) [learn-vue](https://laracasts.com/series/learn-vue-3-step-by-step/episodes/26)
 
