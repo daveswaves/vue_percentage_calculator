@@ -30,12 +30,14 @@ const answer = computed(() => {
    const n1 = parseInt(num1.value);
    const n2 = parseInt(num2.value);
 
+   let res;
+
    if (isNaN(n1) || isNaN(n2)) {return '';}
-   else if (props.operation === 'percent_of') {return n2 / n1;}
-   else if (props.operation === 'is_what_percent') {return n1 / n2 * 100;}
-   else if (props.operation === 'from_to') {
-      return (n1 - n2) / n1  * -100;
-   }
+   else if (props.operation === 'percent_of') {res = n2 / n1;}
+   else if (props.operation === 'is_what_percent') {res = n1 / n2 * 100;}
+   else if (props.operation === 'from_to') {res = (n1 - n2) / n1  * -100;}
+
+   return res.toFixed(2)+'%';
 });
 </script>
 
